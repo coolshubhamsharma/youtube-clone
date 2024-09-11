@@ -46,6 +46,11 @@ nav{
     border-radius: 50%;
 }
 
+.search-box button{
+    border: 0;
+    background: #fff;
+}
+
 @media (max-width:900){
     .menu-icon{
         display: none;

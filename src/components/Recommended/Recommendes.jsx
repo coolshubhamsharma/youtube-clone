@@ -8,12 +8,13 @@ import thumbnail5 from '../../assets/thumbnail5.png'
 import thumbnail6 from '../../assets/thumbnail6.png'
 import thumbnail7 from '../../assets/thumbnail7.png'
 import thumbnail8 from '../../assets/thumbnail8.png'
-import { API_KEY, valu_converter } from '../../data'
+import { valu_converter } from '../../data'
 import { Link } from 'react-router-dom'
 
 const Recommendes = ({categoryId}) => {
 
     const [recommendedVideo , setRecommendedVideos] = useState([]);
+    const API_KEY = import.meta.env.VITE_API_KEY;
 
     const fetchrecommendedVideos = async()=>{
         try{
@@ -40,7 +41,7 @@ const Recommendes = ({categoryId}) => {
     <div className='recommended'>
         {recommendedVideo.map((item,index)=>{
             return(
-            <Link to={`/video/${categoryId}/${item.id}`} className='side-video-list'>
+            <Link key={index} to={`/video/${categoryId}/${item.id}`} className='side-video-list'>
             <img src={item.snippet.thumbnails.medium.url} alt="" />
             <div className="vid-info">
                 <h4>{item.snippet.title}</h4>

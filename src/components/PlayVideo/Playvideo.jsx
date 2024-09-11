@@ -7,7 +7,7 @@ import share from '../../assets/share.png'
 import jack from '../../assets/jack.png'
 import user_profile from '../../assets/user_profile.jpg'
 import save from '../../assets/save.png'
-import { API_KEY, valu_converter } from '../../data'
+import { valu_converter } from '../../data'
 import moment from 'moment'
 import { useParams } from 'react-router-dom'
 
@@ -20,6 +20,7 @@ const Playvideo = ({videoId}) => {
     const [apiData , setApiData] = useState(null);
     const [channelData , setChannelData] = useState(null);
     const [commentData , setCommentData] = useState([]);
+    const API_KEY = import.meta.env.VITE_API_KEY;
 
     const fetchVideoData = async () => {
         try {
@@ -57,7 +58,7 @@ const Playvideo = ({videoId}) => {
             setChannelData(null);
           }
         } catch (error) {
-            console.error('Error fetching channel data:', error);
+            // console.error('Error fetching channel data:');
             setChannelData(null);
         }
 
@@ -71,7 +72,7 @@ const Playvideo = ({videoId}) => {
           const response = await fetch(commentData_url);
           const data =  await response.json();
         //   console.log(apiData.snippet.channelId);
-          console.log(data);
+          // console.log(data);
         //   setCommentData(data.items);
 
           if (data.items && data.items.length > 0) {
@@ -105,7 +106,7 @@ const Playvideo = ({videoId}) => {
   return (
     <div className='play-video'>
         {/* <video src={video1} controls autoPlay muted></video> */}
-        <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         <h3>{apiData ? apiData.snippet.title : "Title Here"}</h3>
         <div className="play-video-info">
             <p>{apiData ? valu_converter(apiData.statistics.viewCount) : "16k"} views &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : "16k"}</p>

@@ -58,7 +58,7 @@ Unlike other platforms, YouTube-Cl0ne emphasizes simplicity in user experience w
 -Multi-language subtitles and closed captions
 
 ## Installation
-- git clone https://github.com/yourusername/youtube-clone.git
+- git clone https://github.com/coolshubhamsharma/youtube-clone.git
 - cd youtube-clone
 
 ## Install Dependencies

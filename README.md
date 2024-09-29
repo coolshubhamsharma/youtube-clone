@@ -5,15 +5,6 @@ Link - <a href="https://youtube-clone-vhrd.onrender.com/"> Link TO Youtube-Clone
 <p align="center">
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231226125707/imresizer-1703575575417.jpg" width="700" title="Youtube-Clone">
 </p >
-<div  align="center">
-  
-[![Build Status](https://img.shields.io/circleci/project/all-contributors/all-contributors/master.svg)](https://circleci.com/gh/all-contributors/workflows/all-contributors/tree/master)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/all-contributors/localized.svg)](https://crowdin.com/project/all-contributors)
-[![Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/e30784c5-9efd-4f20-8a47-13f3fb899613/deploy-status)](https://app.netlify.com/sites/allcontributors-org/deploys) -->
-![GitHub repo size](https://img.shields.io/github/repo-size/pranjay-poddar/Swasthify?color=yellow)
-  
-</div>
 
 ## About Us 
 
